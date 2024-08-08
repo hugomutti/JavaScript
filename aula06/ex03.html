@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JS</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+       var n1 = Number.parseFloat(window.prompt('Digite um número')); // prompt recebe valor string, por isso não houve soma
+       var n2 = Number(window.prompt('Digite outro número')); // pode ser usado apenas o Number para qualquer tipo de numero
+       var s = n1 + n2;
+       window.alert('O resultado é ' + s + '!') // concatenação, o resultado será 4 + 3 = 43
+
+       /* Também é possível convertar para string usando o -> String(n), sendo n aquilo que vc quer converter,
+        ou -> n.toString()
+    
+        Existe o chamado template string, que é feito para substituir o modo antigo de concatenação usado acima, por exemplo:
+        Ao invés de usar -> ("O resultado é " + s), poderia ser usado (`O resultado é ${s}`
+
+        O resultado seria:
+        window.alert(`A soma entre ${n1} e ${n2} é ${s}!`)
+
+        Formatando strings:
+        exemplo: var s = "JavaScript"
+        s.length -> Quantos caracteres tem a string
+        s.toUpperCase() -> Colocar tudo em letras maiusculas
+        s.toLowerCase() -> Colocar tudo em letras minusculas
+        
+        */
+    </script>
+</body>
+</html>
