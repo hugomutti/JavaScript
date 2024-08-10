@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(1, 179, 238);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado!</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg"> Clique aqui </div>
+    <script>
+        //SELECIONANDO ELEMENTOS DO DOM 
+
+        //Por marca: getElementsByTagName() - Neste caso, consegue-se selecionar mais de um objeto, por exemplo, temos 
+        //duas tags <p>, um <body> etc..
+        
+            var p1 = window.document.getElementsByTagName('p')[0] // nesse caso o [0] é o primeiro <p>
+            window.document.write('Está escrito assim: ' + p1.innerText) // o innerText vai apenas o texto, já o innerHTML 
+            //vai o texto já formatado com HTML
+
+            var corpo = window.document.body
+            corpo.style.background = 'black'
+
+            p1.style.color = 'red'
+        
+        // Por id: getElementById()
+            var dmsg = window.document.getElementById('msg')
+            dmsg.style.background = 'green'
+        // Na verdade, o princípio é o mesmo para class e name, então basta substituir no caso a caso
+
+        // Por seletor: querySelector() e querySelectorAll()
+
+           var d = window.document.querySelector('div#msg') // se for class é um ponto (.)
+           d.innerText ='Hello again'
+        
+    </script>
+</body>
+</html>
