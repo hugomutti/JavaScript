@@ -7,7 +7,7 @@ function gerar(){
         var n = Number(txtnum.value)
         for(var c = 1; c <= 10 ; c++){
             var item = document.createElement('option')
-            item.text = `${n} x ${c} = ${n*c}`
+            item.innerText = `${n} x ${c} = ${n*c}`
             tab.appendChild(item)
         }
     }
